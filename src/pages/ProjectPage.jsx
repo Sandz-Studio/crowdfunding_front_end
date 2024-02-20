@@ -17,7 +17,7 @@ function ProjectPage() {
                 })}
             </ul>
         </div>
-        );
+    );
 }
 
-export default ProjectPage
+export default ProjectPage;
