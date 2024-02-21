@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# it’s best practice to never commit a .env to git.
+.env

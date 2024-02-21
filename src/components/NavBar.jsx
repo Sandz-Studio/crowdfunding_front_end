@@ -9,9 +9,10 @@ function NavBar() {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          {/* remove link as no longer needed? can be used for something else later? */}
+          {/* <li>
             <Link to="/project">Project</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     <Outlet />
