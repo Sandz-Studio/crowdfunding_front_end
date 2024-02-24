@@ -4,6 +4,7 @@ import "./HomePage.css";
 
 function HomePage() {
   const { projects } = useProjects();
+  
   return (
     <div id="project-list">
         {projects.map((projectData, key) => {

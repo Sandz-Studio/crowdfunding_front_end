@@ -4,6 +4,7 @@ async function getProject(projectId) {
 
   if (!response.ok) {
       const fallbackError = `Error fetching project with id ${projectId}`;
+      
       const data = await response.json().catch(() => {
         throw new Error(fallbackError);
       });

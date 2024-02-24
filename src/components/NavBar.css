@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #89c1a0; /* White background color */
+  background-color: #89c1a0;
+  height: 3rem;
   padding: 10px 20px; /* Padding around the navbar */
   /* display: flex;  */
   justify-content: space-between; /* Space items evenly */
