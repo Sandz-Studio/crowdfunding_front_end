@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
+import IsLoading from "../components/IsLoading";
 import "./ProjectsPage.css";
 
 function ProjectsPage() {
   const { projects, isLoading, error, refetchProjects } = useProjects();
   const [errorMessage, setErrorMessage] = useState(null);
-  
-  // useEffect to handle errors
-  useEffect(() => {
-    if (error) {
-      setErrorMessage("Error fetching projects. Please try again later.");
-    }
-  }, [error]);
 
-  // Function to handle retrying the data fetching
-  const handleRetry = () => {
-    setErrorMessage(null); // Clear error message
-    refetchProjects(); // Retry fetching projects
-  };
+  if (isLoading) {
+    return <IsLoading />
+  }
+
+  if (error) {
+    return (<p>{errorMessage}</p>)
+  }
 
   return (
     <div id="project-list">
+    <h1>Add a sort function later?</h1>
       {isLoading && <div>Loading...</div>}
       {error && (
         <div>

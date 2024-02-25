@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
-
+import FooterBar from "../components/FooterBar";
 import "./NavBar.css";
 
 function NavBar() {
@@ -16,7 +16,8 @@ function NavBar() {
       <nav className="nav-links">
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/projects">Projects</NavLink></li>
+          <li><NavLink to="/projects">Campaigns</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
         {auth.token ? (
           <ul>
@@ -30,6 +31,7 @@ function NavBar() {
         )}
       </nav>
     <Outlet />
+    <FooterBar />
     </div>
   );
 }

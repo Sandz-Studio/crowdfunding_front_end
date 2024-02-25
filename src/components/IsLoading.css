@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+.is-loading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.is-loading h1 {
+font-family: 'Oswald', sans-serif;
+font-size: 48px;
+color: #c189aa;
+}
+
+.is-loading p {
+font-family: 'Oswald', sans-serif;
+font-size: 24px;
+color: #16151b;
+}

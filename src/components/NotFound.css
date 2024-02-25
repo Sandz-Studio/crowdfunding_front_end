@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+.not-found {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .not-found h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    color: #c189aa;
+  }
+  
+  .not-found p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #16151b;
+  }

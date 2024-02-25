@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
+import IsLoading from "../components/IsLoading";
 import "./HomePage.css";
 
 function HomePage() {
@@ -10,7 +11,7 @@ function HomePage() {
   const latestProjects = projects.slice(1, 5); // Get the last 4 latest projects
   
   if (isLoading) {
-    return (<p>loading...</p>)
+    return <IsLoading />
   }
 
   if (error) {
@@ -19,33 +20,18 @@ function HomePage() {
 
   return (
     <div id="featured-list">
+      <h1>Featured</h1>
       <div className="featured-project">
         <ProjectCard projectData={featuredProject} />
       </div>
+      <h2>Recent Campains</h2>
       {latestProjects.map((projectData, key) => (
-        <div key={key}>
+        <div key={key} className="recent-list">
           <ProjectCard projectData={projectData} />
         </div>
       ))}
     </div>
   );
-
-  // return (
-  //   <div id="project-list">
-  //     {isLoading && <div>Loading...</div>}
-  //     {error && (
-  //       <div>
-  //         <p>{errorMessage}</p>
-  //         <button onClick={handleRetry}>Retry</button>
-  //       </div>
-  //     )}
-  //     {!isLoading && !error && (
-  //       projects.map((projectData, key) => (
-  //         <ProjectCard key={key} projectData={projectData} />
-  //       ))
-  //     )}
-  //   </div>
-  // );
 }
 
 export default HomePage;
