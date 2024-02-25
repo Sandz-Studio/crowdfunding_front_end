@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 
 import "./NavBar.css";
@@ -13,29 +13,20 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <nav>
-        <ul className="nav-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/project">Project</Link>
-          </li>
+      <nav className="nav-links">
+        <ul>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/projects">Projects</NavLink></li>
         </ul>
         {auth.token ? (
           <ul>
-            <li>
-              <Link to="/" onClick={handleLogout}>
-              Log Out
-              </Link>
-            </li>
+            <li><NavLink to="/profile" >Profile</NavLink></li>
+            <li><NavLink to="/" onClick={handleLogout}>Log Out</NavLink></li>
           </ul>
         ) : (
           <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li> 
-        </ul>
+            <li><NavLink to="/login">Login</NavLink></li> 
+          </ul>
         )}
       </nav>
     <Outlet />

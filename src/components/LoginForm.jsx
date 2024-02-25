@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js";
 
+import "./LoginForm.css";
+
 function LoginForm() {
   const navigate = useNavigate();
 
@@ -38,21 +40,6 @@ function LoginForm() {
     }
 };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   if (credentials.username && credentials.password) {
-  //     try {
-  //       await postLogin(credentials.username, credentials.password);
-  //       window.localStorage.setItem("token", response.token);
-  //       setAuth({
-  //         token: response.token,
-  //       });
-  //       navigate("/");
-  //     } catch (err) {
-  //       window.alert(err.message);
-  //     }
-  //   }
-  // };
 
   return (
     <form>

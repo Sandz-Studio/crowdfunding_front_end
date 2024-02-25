@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import getProjects from "../api/get-projects";
 
 export default function useProjects() {
