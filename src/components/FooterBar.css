@@ -1,0 +1,11 @@
+.footerbar {
+    background-color: #89c1a0;
+    height: 5rem;
+    padding: 20px 20px; /* Padding around the navbar */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    width: 100%;
+    text-align:center;
+    margin-top: 4rem;
+  }

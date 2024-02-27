@@ -16,3 +16,7 @@ export const AuthProvider = (props) => {
         </AuthContext.Provider>
     );
 };
+
+/* if you want to access the authentication state (auth object) 
+and the function to update it (setAuth) in your components, 
+you can use the useContext hook provided by React to consume the context.*/

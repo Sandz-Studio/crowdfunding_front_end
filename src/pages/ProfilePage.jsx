@@ -1,5 +1,16 @@
+import { useParams } from "react-router-dom";
+import ProfileCard from "../components/ProfileCard";
+
 function ProfilePage() {
-    return <h1>This is a userprofile Page</h1>
+    // Extract the user ID from the URL parameters
+    const { id } = useParams();
+
+    return (
+    <div>
+        {/* Pass userID to the Profilecard */}
+        <ProfileCard userId={id}/>
+    </div>
+    )
 }
 
 export default ProfilePage;

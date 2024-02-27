@@ -1,6 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
-import FooterBar from "../components/FooterBar";
 import "./NavBar.css";
 
 function NavBar() {
@@ -21,7 +20,8 @@ function NavBar() {
         </ul>
         {auth.token ? (
           <ul>
-            <li><NavLink to="/profile" >Profile</NavLink></li>
+            {/* Pass the user's ID as a parameter in the "Profile" link */}
+            <li><NavLink to={`/profile/${auth.userId}`} >Profile</NavLink></li>
             <li><NavLink to="/" onClick={handleLogout}>Log Out</NavLink></li>
           </ul>
         ) : (
@@ -30,8 +30,6 @@ function NavBar() {
           </ul>
         )}
       </nav>
-    <Outlet />
-    <FooterBar />
     </div>
   );
 }
