@@ -21,7 +21,8 @@ function NavBar() {
         {auth.token ? (
           <ul>
             {/* Pass the user's ID as a parameter in the "Profile" link */}
-            <li><NavLink to={`/profile/${auth.userId}`} >Profile</NavLink></li>
+            {/* So the user will be directed to their profile page - the profile page component will get the user ID from the URL */}
+            <li><NavLink to={`/profile`} >Profile</NavLink></li>
             <li><NavLink to="/" onClick={handleLogout}>Log Out</NavLink></li>
           </ul>
         ) : (

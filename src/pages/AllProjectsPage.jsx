@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
 import IsLoading from "../components/IsLoading";
-import "./ProjectsPage.css";
+import "./AllProjectsPage.css";
 
-function ProjectsPage() {
+function AllProjectsPage() {
   const { projects, isLoading, error, refetchProjects } = useProjects();
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -35,4 +35,4 @@ function ProjectsPage() {
   );
 }
 
-export default ProjectsPage;
+export default AllProjectsPage;

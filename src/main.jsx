@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
-import ProjectsPage from "./pages/ProjectsPage.jsx";
+import AllProjectsPage from "./pages/AllProjectsPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
@@ -21,9 +21,9 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
-      { path: "/projects", element: <ProjectsPage /> },
+      { path: "/projects", element: <AllProjectsPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
-      { path: "/profile/:id", element: <ProfilePage /> },
+      { path: "/profile", element: <ProfilePage /> },
       { path: "/contact", element: <ContactPage /> },
     ],
   },

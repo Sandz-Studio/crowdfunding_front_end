@@ -1,49 +1,38 @@
-import { useState, useEffect } from "react";
+// import react library's 'useContext' hook - used for consuming context within functional components
+import React, { useContext } from "react";
+// useUser - custom hook I made to handle state when requesting user data
+import useUser from "../hooks/use-user";
+// imports AuthContext from Authprovider - the curley brackets and space is used when importing a named export?
+import { AuthContext } from "../components/AuthProvider.jsx";
 
-function ProfileCard({ userId }) {
-    const [profile, setProfile] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetchUserProfile(userId);
-    }, [userId]); // Fetch data when the user ID changes
+function ProfileCard() {
+    const { auth } = useContext(AuthContext); 
+    const userId =  auth.userId;
 
-    const fetchUserProfile = async (userId) => {
-        try {
-            const response = await fetch(`your-api-url/user/${userId}`);
-            if (!response.ok) {
-                throw new Error('Failed to fetch user profile');
-            }
-            const profileData = await response.json();
-            setProfile(profileData);
-            setLoading(false);
-        } catch (error) {
-            setError(error.message);
-            setLoading(false);
-        }
-    };
+    if (!userId) {
+        return null
+    }
 
-    if (loading) {
-        return <div>Loading...</div>;
+    // UseUser returns 3 things so we need to grab them all
+    const { user, isLoading, error } = useUser(userId);
+
+    if (isLoading) {
+        return (<p>loading...</p>)
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return (<p>{error.message}</p>)
     }
 
     return (
         <div>
             {/* Display user profile data */}
-            <h1>User Profile</h1>
-            {profile && (
-                <div>
-                    <p>User ID: {profile.userId}</p>
-                    <p>Name: {profile.name}</p>
-                    <p>Email: {profile.email}</p>
-                    {/* Add other profile fields as needed */}
-                </div>
-            )}
+            <h2>User Profile</h2>
+            <p>Name: {user.first_name}</p>
+            <p>Email: {user.email}</p>
+            <p>Date Joined: {user.date_joined}</p>
+            {/* Map through projects by this user later */}
         </div>
     );
 }
