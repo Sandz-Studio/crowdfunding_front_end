@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { useAuth } from "../hooks/use-auth";
+import { useAuth } from "../../hooks/use-auth";
 import "./NavBar.css";
 
 function NavBar() {
@@ -15,6 +15,7 @@ function NavBar() {
       <nav className="nav-links">
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/projects">Campaigns</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
@@ -27,7 +28,8 @@ function NavBar() {
           </ul>
         ) : (
           <ul>
-            <li><NavLink to="/login">Login</NavLink></li> 
+            <li><NavLink to="/createaccount">Create Account</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>  
           </ul>
         )}
       </nav>

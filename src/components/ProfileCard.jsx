@@ -1,9 +1,9 @@
 // import react library's 'useContext' hook - used for consuming context within functional components
 import React, { useContext } from "react";
 // useUser - custom hook I made to handle state when requesting user data
-import useUser from "../hooks/use-user";
+import useUser from "../hooks/use-user.js";
 // imports AuthContext from Authprovider - the curley brackets and space is used when importing a named export?
-import { AuthContext } from "../components/AuthProvider.jsx";
+import { AuthContext } from "./AuthProvider.jsx";
 
 
 function ProfileCard() {
