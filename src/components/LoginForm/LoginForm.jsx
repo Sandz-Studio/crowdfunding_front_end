@@ -9,7 +9,7 @@ import "./LoginForm.css";
 function LoginForm() {
   const navigate = useNavigate();
 
-  const {auth, setAuth} = useAuth();
+  const {setAuth} = useAuth();
 
   const [credentials, setCredentials] = useState({
     username: "",

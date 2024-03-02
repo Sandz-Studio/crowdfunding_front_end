@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // Create an API request first to POST to the API create-user
 import postCreateUser from "../../api/post-createuser.js";
 
-// import css file later
+import "./CreateUserForm.css";
 
 function CreateUserForm() {
     // navigate to home page - hook provided by react
@@ -38,7 +38,7 @@ function CreateUserForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (userData.username && first_name && userData.last_name && userData.email && userData.password) {
+        if (userData.username && userData.first_name && userData.last_name && userData.email && userData.password) {
             // using API async function
             postCreateUser(
                 userData
