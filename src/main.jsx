@@ -6,8 +6,10 @@ import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import AllProjectsPage from "./pages/AllProjectsPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
+import CreateUserPage from "./pages/CreateUserPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 
 import App from "./app.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
@@ -21,10 +23,12 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
+      { path: "/createaccount", element: <CreateUserPage /> },
       { path: "/projects", element: <AllProjectsPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
       { path: "/profile", element: <ProfilePage /> },
       { path: "/contact", element: <ContactPage /> },
+      { path: "/about", element: <AboutPage /> },
     ],
   },
 ]);

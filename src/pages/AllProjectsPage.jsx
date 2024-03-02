@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useProjects from "../hooks/use-projects";
-import ProjectCard from "../components/ProjectCard";
-import IsLoading from "../components/IsLoading";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import IsLoading from "../components/IsLoading/IsLoading";
 import "./AllProjectsPage.css";
 
 function AllProjectsPage() {

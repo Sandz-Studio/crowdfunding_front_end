@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import FooterBar from "./components/FooterBar.jsx";
+import NavBar from "./components/Nav/NavBar.jsx";
+import FooterBar from "./components/Footer/FooterBar.jsx";
 import './styles/global.css';
 
 const App = () => {
