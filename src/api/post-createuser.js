@@ -19,7 +19,7 @@ async function postCreateUser(userData) {
         });
 
         if(!response.ok) {
-            const fallbackError = `Error trying to login`;
+            const fallbackError = `Error trying to create account.`;
 
             const data = await response.json().catch(() => {
                 throw new Error(fallbackError);

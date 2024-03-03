@@ -21,7 +21,7 @@ function CreateUserForm() {
         "password":"",
     });
     // log to see what is happening
-    console.log(userData)
+    // console.log(userData)
 
     // Arrow function within arrow function - Handle chnnges to form input field
     // Uses event object as a parameter, 

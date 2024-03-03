@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../../hooks/use-auth";
 import "./NavBar.css";
 
@@ -24,6 +24,7 @@ function NavBar() {
             {/* Pass the user's ID as a parameter in the "Profile" link */}
             {/* So the user will be directed to their profile page - the profile page component will get the user ID from the URL */}
             <li><NavLink to={`/profile`} >Profile</NavLink></li>
+            <li><NavLink to={`/createproject`} >Create Campaign</NavLink></li>
             <li><NavLink to="/" onClick={handleLogout}>Log Out</NavLink></li>
           </ul>
         ) : (
