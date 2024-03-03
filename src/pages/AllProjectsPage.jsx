@@ -23,11 +23,13 @@ function AllProjectsPage() {
   }
 
   return (
-    <div id="project-list">
+    <div>
       <h1>Add a sort function later?</h1>
+        <div id="project-list">
             {projects.map((projectData, key) => {
                 return <ProjectCard key={key} projectData={projectData} />;
             })}
+        </div>
     </div>
   );
 }

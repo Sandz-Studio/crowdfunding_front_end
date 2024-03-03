@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import useProject from "../hooks/use-project";
 
+import "./ProjectPage.css";
+
 function ProjectPage() {
   // Here we use a hook that comes for free in react router called `useParams`to get the id from the URL so that we can pass it to our useProject hook.
   const { id } = useParams();
@@ -16,11 +18,15 @@ function ProjectPage() {
   }
 
   return (
-    <div>
-      <h2>{project.title}</h2>
-      <h3>Created at: {project.date_created}</h3>
-      <h3>{`Status: ${project.is_open}`}</h3>
-      <h3>Pledges:</h3>
+    <div className="container">
+      <h1>{project.title}</h1>
+      <img src={project.image} alt="referee generic photo" />
+      <p>Campaign ID: {project.id}</p>
+      <p>Project Owner ID: {project.owner}</p>
+      <p>Campaign Created: {new Date(project.date_created).toLocaleDateString('en-GB')}</p>
+      <p>Description: {project.description}</p>
+      <p>{`Accepting Pledges: ${project.is_open}`}</p>
+      <p>Pledges:</p>
       <ul>
         {project.pledges.map((pledgeData, key) => {
           return (

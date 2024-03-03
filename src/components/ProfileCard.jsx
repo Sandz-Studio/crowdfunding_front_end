@@ -6,6 +6,8 @@ import useUser from "../hooks/use-user.js";
 import { AuthContext } from "./AuthProvider.jsx";
 import IsLoading from "../components/IsLoading/IsLoading";
 
+import "./ProfileCard.css";
+
 
 function ProfileCard() {
     const { auth } = useContext(AuthContext); 
@@ -27,12 +29,17 @@ function ProfileCard() {
     }
 
     return (
-        <div>
+        <div >
             {/* Display user profile data */}
-            <h2>User Profile</h2>
-            <p>Name: {user.first_name}</p>
+            <h1>My Profile</h1>
+            <div className="profile-card">
+            <img src="/images/avatar-1577909_1280.webp" alt="default avatar icon" />
+            <h2>{user.username}</h2>
+            <p>User ID: {user.id}</p>
+            <p>Name: {user.first_name} {user.last_name}</p>
             <p>Email: {user.email}</p>
-            <p>Date Joined: {user.date_joined}</p>
+            <p>Date Joined: {new Date(user.date_joined).toLocaleDateString('en-GB')}</p>
+            </div>
             {/* Map through projects by this user later */}
         </div>
     );

@@ -2,16 +2,34 @@
 
 
 .container {
-  max-width: 800px;
-  margin: 3rem auto;
+  /* max-width: 1200px; */
+  margin: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
   /* padding-bottom: 10px; */
 }
 
-li {
+.bio {
+ max-width: 700px;
+}
+
+.bio-list {
+  padding-left: 1em; /* Add padding to align text */
+}
+
+.bio li {
   list-style: lower-roman;
+  
+  padding-left: 1em; /* Add padding to align text */
 }
 
 li::marker {
   color: #5DA57A;
   font-weight: 500;
 }
+
+/* .about-img {
+  width: 900px;
+} */

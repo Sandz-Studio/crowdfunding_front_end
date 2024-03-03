@@ -53,7 +53,7 @@ nav li a:hover {
   color: #16151b;
 }
 
-img {
+.navbar img {
   width: 250px;
   float: left;
 }

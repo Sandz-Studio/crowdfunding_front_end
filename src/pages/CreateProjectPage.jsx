@@ -3,7 +3,7 @@ import CreateProjectForm from "../components/CreateProject/CreateProjectForm";
 function CreateProject() {
     return (
     <div>
-        <h2>Create a fundraising campaign.</h2>
+        <h1>Create a fundraising campaign.</h1>
         <CreateProjectForm />
     </div>
     )

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 
 form {
-  max-width: 400px;
+  max-width: 600px;
   align-items: center;
-  margin: 6rem auto;
+  /* margin: 6rem auto; */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 .footerbar {
     background-color: #89c1a0;
-    height: 7rem;
+    height: 9rem;
     padding: 40px 20px; /* Padding around the navbar */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
@@ -9,6 +9,6 @@
     text-align:center;
     margin-top: 4rem;
     position: relative;
-  left: 0;
-  bottom: 0; /* Align it to the bottom of the viewport */
+    left: 0;
+    bottom: 0; /* Align it to the bottom of the viewport */
   }
