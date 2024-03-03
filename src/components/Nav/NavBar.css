@@ -2,7 +2,7 @@
 
 .navbar {
   background-color: #89c1a0;
-  height: 5rem;
+  height: 6rem;
   padding: 20px 20px; /* Padding around the navbar */
   justify-content: space-between; /* Space items evenly */
   align-items: center; /* Center items vertically */
@@ -15,7 +15,15 @@ nav{
   display: flex; 
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   float: right;
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 nav a{
@@ -24,24 +32,28 @@ nav a{
   text-transform:uppercase;
   text-decoration:none;
   color:#16151b;
-  margin:10px 15px;
+  justify-content: space-between;
+  margin:5px 15px;
   font-size:16px;
   letter-spacing:1px;
   display:inline-block;
   
 }
 
-.nav-links {
+
+
+nav li {
   list-style-type: none; /* Remove bullet points */
-  margin: 0; /* Remove default margin */
-  padding: 5, 5; /* Remove default padding */
+  /* display: inline-block; */
+  align-items: center;
 }
 
-.nav-links li {
-  display: inline-block; /* Display links horizontally */
-  margin-right: 20px; /* Add spacing between links */
-}
-
-.nav-links a:hover {
+nav li a:hover {
   text-decoration: line-through;
+  color: #16151b;
+}
+
+img {
+  width: 250px;
+  float: left;
 }

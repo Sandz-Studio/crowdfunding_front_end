@@ -12,7 +12,9 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <nav className="nav-links">
+      <img src="public/images/Logonobackground.png" alt="Grassroots Goals logo"/>
+      {/* <nav className="nav-links"> */}
+      <nav>
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>

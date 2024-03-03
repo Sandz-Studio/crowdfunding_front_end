@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  /* padding-bottom: 10px; */
+}
+
+li {
+  list-style: lower-roman;
+}
+
+li::marker {
+  color: #5DA57A;
+  font-weight: 500;
+}
