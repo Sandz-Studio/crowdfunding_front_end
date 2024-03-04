@@ -30,6 +30,6 @@ li::marker {
   font-weight: 500;
 }
 
-/* .about-img {
-  width: 900px;
-} */
+.about-img {
+  width: 400px;
+}

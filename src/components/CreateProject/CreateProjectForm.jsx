@@ -53,7 +53,7 @@ function CreateProjectForm() {
         }
     };
     return (
-        <form>
+        <form> onSubmit={handleSubmit}
             <div>
                 <label htmlFor="title">Title:</label>
                 <input type="text" id="title" placeholder="Enter project title" onChange={handleChange} />
@@ -78,7 +78,7 @@ function CreateProjectForm() {
                 <label htmlFor="date_created">Date Created</label>
                 <input type="date" id="date_created" onChange={handleChange} />
             </div>
-            <button type="submit" onClick={handleSubmit}>Create Campaign</button>
+            <button type="submit">Create Campaign</button>
         </form>
     );
 }
