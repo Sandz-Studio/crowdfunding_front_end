@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+.container {
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column; /* Change to column layout for phones */
+  align-items: center;
+  gap: 1rem; 
+}
+
+.bio {
+  max-width: 100%; /* Allow bio to take full width on phones */
+}
+
+.bio-list {
+  padding-left: 1rem; /* Remove padding for better alignment on phones */
+}
+
+.bio li {
+  list-style: lower-roman; /* Change list style to disc for phones */
+  padding-left: .5rem; 
+}
+
+li::marker {
+  color: #5DA57A;
+  font-weight: 500;
+}
+
+.about-img {
+  width: 100%; /* Allow image to take full width on phones */
+}
+
+/* Media query for phones with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row; /* Switch back to row layout for larger screens */
+    align-items: center;
+    align-content: center;
+    justify-content: center; /* Center the container horizontally */
+  
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Limit the maximum width of the container */
+  }
+  
+  .bio {
+    max-width: 700px;
+  }
+
+  .bio-list {
+    padding-left: 1em; /* Add padding back for larger screens */
+  }
+
+  .bio li {
+    list-style: lower-roman;
+  }
+
+  .about-img {
+    width: 100%; /* Adjust image width to take full width */
+    max-width: 350px; /* Limit maximum image width */
+    margin-top: 5rem;
+    margin-left: 2rem;
+  }
+}

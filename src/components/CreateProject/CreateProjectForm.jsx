@@ -53,7 +53,7 @@ function CreateProjectForm() {
         }
     };
     return (
-        <form> onSubmit={handleSubmit}
+        <form onSubmit={handleSubmit}> 
             <div>
                 <label htmlFor="title">Title:</label>
                 <input type="text" id="title" placeholder="Enter project title" onChange={handleChange} />

@@ -1,4 +1,4 @@
-import CreateUserForm from "../components/CreateUser/CreateUserForm"
+import CreateUserForm from "../../components/CreateUser/CreateUserForm"
 
 function CreateUser() {
     return (

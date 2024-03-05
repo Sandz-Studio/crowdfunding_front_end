@@ -1,24 +1,46 @@
 import { useParams } from "react-router-dom";
-import useProject from "../hooks/use-project";
-import CreatePledgeForm from "../components/CreatePledge/CreatePledgeForm.jsx";
+import useProject from "../../hooks/use-project.js";
+import CreatePledgeForm from "../../components/CreatePledge/CreatePledgeForm.jsx";
+import IsLoading from "../../components/IsLoading/IsLoading";
+
+// attempting to update project
+// import { useContext } from "react";
+// import { AuthContext } from "../../components/AuthProvider";
+// import putUpdateProject from "../../api/put-project.js";
 
 import "./ProjectPage.css";
-// import "../components/CreatePledge/CreatePledgeForm.css";
+
+
 
 function ProjectPage() {
-  // Here we use a hook that comes for free in react router called `useParams`to get the id from the URL so that we can pass it to our useProject hook.
   const { id } = useParams();
-  // useProject returns three pieces of info, so we need to grab them all here
+
+  // const { auth } = useContext(AuthContext);
+  
   const { project, isLoading, error } = useProject(id);
 
+
+
+
+// Assuming currentUser is fetched and available
+// const currentUser = {userId: window.localStorage.getItem("id")}; // Fetch current user information here
+// console.log(currentUser)
+// Check if the current user is the owner of the project
+// const isOwner = currentUser.userId === project.owner;
+
+
+
+
   if (isLoading) {
-    return (<p>loading...</p>)
+    return <IsLoading />
   }
 
   if (error) {
     return (<p>{error.message}</p>)
   }
 
+
+  
   return (
     <div>
       <div className="container">
@@ -34,7 +56,7 @@ function ProjectPage() {
           {project.pledges.map((pledgeData, key) => {
             return (
               <li key={key}>
-                {pledgeData.amount} from {pledgeData.supporter}
+                {pledgeData.amount} from {pledgeData.supporter} comment: {pledgeData.comment}
               </li>
             );
           })}

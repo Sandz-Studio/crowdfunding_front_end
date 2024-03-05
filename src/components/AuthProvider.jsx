@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
 
 // Here we create the Context

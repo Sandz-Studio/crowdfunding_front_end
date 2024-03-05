@@ -1,3 +1,11 @@
+.featured-list {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+
+@media screen and (min-width: 768px) {
 
 .featured-list {
   display: grid;
@@ -21,15 +29,4 @@
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns with equal width */
 }
-
-/* Media query for smaller screens */ 
-/* Fix this! */
-@media screen and (max-width: 768px) {
-  #featured-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
-  }
-
-  .featured-project {
-    grid-column: span 2; /* Span two columns for the featured project on smaller screens */
-  }
 }

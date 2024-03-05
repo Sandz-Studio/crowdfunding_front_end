@@ -1,0 +1,30 @@
+.contact-container {
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.contact-info p {
+ font-weight: 400;
+}
+
+.contact-form {
+    margin-top: 1rem;
+    margin-bottom: rem;
+}
+
+/* Media query for min width 768px */
+@media only screen and (min-width: 768px) {
+
+    .contact-form {
+        margin-top: 1rem;
+        margin-bottom: rem;
+        width: 600px;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+    }
+    .contact-form img {
+        float: right;
+    }
+}

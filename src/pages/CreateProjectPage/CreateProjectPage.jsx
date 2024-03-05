@@ -1,4 +1,4 @@
-import CreateProjectForm from "../components/CreateProject/CreateProjectForm";
+import CreateProjectForm from "../../components/CreateProject/CreateProjectForm";
 
 function CreateProject() {
     return (

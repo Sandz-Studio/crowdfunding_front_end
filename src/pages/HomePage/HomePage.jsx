@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import useProjects from "../hooks/use-projects";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
-import IsLoading from "../components/IsLoading/IsLoading";
+import useProjects from "../../hooks/use-projects";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import IsLoading from "../../components/IsLoading/IsLoading";
 import "./HomePage.css";
 
 function HomePage() {
@@ -31,7 +31,7 @@ function HomePage() {
       <div className="featured-project">
         <ProjectCard projectData={featuredProject} />
       </div>
-      {/* <h2>Recent Campains</h2> */}
+      <h2>Recent Campains</h2>
       {latestProjects.map((projectData, key) => (
         <div key={key} className="recent-list">
           <ProjectCard projectData={projectData} />

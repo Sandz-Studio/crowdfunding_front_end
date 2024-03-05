@@ -1,9 +1,0 @@
-#project-list {
-    display: grid;
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 60px;
-    row-gap: 10px;
-    margin: 5rem;
-}

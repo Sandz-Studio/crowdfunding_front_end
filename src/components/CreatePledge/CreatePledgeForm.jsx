@@ -30,7 +30,7 @@ function CreatePledgeForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-          if (pledgeData.amount > 0 && pledgeData.comment && pledgeData.anonymous) {
+          if (pledgeData.amount > 0 && pledgeData.comment) {
             postPledge(pledgeData)
               .then((response) => {
                 // Handle the response if needed
@@ -38,7 +38,7 @@ function CreatePledgeForm() {
                 // Redirect the user to the project detail page or any desired location
                 navigate(`/project/${id}`);
                 // use location reload once the form is working properly.
-                // location.reload(); 
+                // location.reload();
               })
               
               .catch((error) => {

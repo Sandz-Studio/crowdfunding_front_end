@@ -1,0 +1,29 @@
+.profile-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Set width to 100% for mobile-first */
+  max-width: 600px; /* Set max-width for larger screens */
+  height: auto; /* Let the height adjust based on content */
+  margin: 0 auto;
+}
+
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 15px auto; /* Center the image horizontally */
+}
+
+/* Media query for min width 768px */
+@media only screen and (min-width: 768px) {
+  .profile-card {
+      width: 600px; /* Adjust width for larger screens */
+  }
+
+  .profile-card img {
+      margin: 15px; /* Reset margin for larger screens */
+  }
+}
