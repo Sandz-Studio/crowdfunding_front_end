@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.login-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: 100%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-page a {
+    font-family: 'Quicksand', sans-serif;
+    color: #5DA57A;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media screen and (min-width: 768px) {
+    .login-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .login-page {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+}

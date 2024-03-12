@@ -1,33 +1,51 @@
 
 /* CSS for mobile size */
 .all-projects {
-    margin-top: 0;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
 }
 
 .project-list {
     display: flex;
     flex-direction: column; /* Switch to column layout for mobile */
     flex-wrap: wrap;
-    row-gap: 10px;
+    row-gap: 20px;
 }
 
 /* Media query for a minimum width of 768px */
 @media only screen and (min-width: 768px) {
     .all-projects {
-        margin-top: 3rem;
+
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 1200px;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .project-list {
         display: grid;
-        grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Adjust column layout for larger screens */
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Adjust column layout for larger screens */
         column-gap: 60px;
         row-gap: 10px;
-        margin: 2rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .all-projects {
+        display: flex;
+        flex-direction: column;
+        column-gap: 60px;
+        row-gap: 20px;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        column-gap: 60px;
+        row-gap: 20px;
     }
 }

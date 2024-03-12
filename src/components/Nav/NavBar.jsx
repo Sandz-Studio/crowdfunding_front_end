@@ -31,7 +31,7 @@ function NavBar() {
           </ul>
         ) : (
           <ul>
-            <li><NavLink to="/createaccount">Create Account</NavLink></li>
+            {/* <li><NavLink to="/createaccount">Create Account</NavLink></li> */}
             <li><NavLink to="/login">Login</NavLink></li>  
           </ul>
         )}

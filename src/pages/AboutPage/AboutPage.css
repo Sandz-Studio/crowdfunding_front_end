@@ -1,25 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 
-.container {
-  margin-top: 0;
-  margin-left: 5px;
-  margin-right: 5px;
-  display: flex;
-  flex-direction: column; /* Change to column layout for phones */
-  align-items: center;
-  gap: 1rem; 
-}
-
-.bio {
-  max-width: 100%; /* Allow bio to take full width on phones */
+.about-page {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .bio-list {
-  padding-left: 1rem; /* Remove padding for better alignment on phones */
+  padding-left: 1rem;
 }
 
 .bio li {
-  list-style: lower-roman; /* Change list style to disc for phones */
+  list-style: lower-roman;
   padding-left: .5rem; 
 }
 
@@ -29,39 +23,48 @@ li::marker {
 }
 
 .about-img {
-  width: 100%; /* Allow image to take full width on phones */
+  width: 80%; /* Allow image to take full width on phones */
+  margin: 2rem;
 }
 
 /* Media query for phones with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: row; /* Switch back to row layout for larger screens */
-    align-items: center;
-    align-content: center;
-    justify-content: center; /* Center the container horizontally */
-  
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Limit the maximum width of the container */
-  }
-  
-  .bio {
-    max-width: 700px;
-  }
-
-  .bio-list {
-    padding-left: 1em; /* Add padding back for larger screens */
-  }
-
-  .bio li {
-    list-style: lower-roman;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .about-img {
-    width: 100%; /* Adjust image width to take full width */
-    max-width: 350px; /* Limit maximum image width */
-    margin-top: 5rem;
-    margin-left: 2rem;
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    height: auto; /* Let the height adjust based on the image width */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    grid-template-columns: 60% 40%;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    max-width: 1000px; 
   }
 }

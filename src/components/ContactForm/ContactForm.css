@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 
 form {
-    width: 400px;
+    width: auto;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -44,6 +44,6 @@ button[type="submit"]:hover {
 /* Media query for screens with a minimum width of 768px */
 @media screen and (min-width: 768px) {
   form {
-      width: 600px; 
+      width: 800px; /* Adjust width for medium and larger screens */
   }
 }

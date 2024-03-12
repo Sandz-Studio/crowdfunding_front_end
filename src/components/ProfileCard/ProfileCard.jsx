@@ -8,41 +8,49 @@ import IsLoading from "../IsLoading/IsLoading.jsx";
 
 import "./ProfileCard.css";
 
-
 function ProfileCard() {
-    const { auth } = useContext(AuthContext); 
-    const userId =  auth.userId;
+  const { auth } = useContext(AuthContext);
+  const userId = auth.userId;
 
-    // UseUser returns 3 things so we need to grab them all
-    const { user, isLoading, error } = useUser(userId);
+  // UseUser returns 3 things so we need to grab them all
+  const { user, isLoading, error } = useUser(userId);
 
-    if (!userId) {
-        return null
-    }
+  if (!userId) {
+    return null;
+  }
 
-    if (isLoading) {
-        return <IsLoading />
-    }
+  if (isLoading) {
+    return <IsLoading />;
+  }
 
-    if (error) {
-        return (<p>{error.message}</p>)
-    }
+  if (error) {
+    return <p>{error.message}</p>;
+  }
 
-    return (
-        <div >
-            {/* Display user profile data */}
-            <h1>My Profile</h1>
-            <div className="profile-card">
-            <img src="/images/avatar-1577909_1280.webp" alt="default avatar icon" />
-            <h2>{user.username}</h2>
-            <p>User ID: {user.id}</p>
-            <p>Name: {user.first_name} {user.last_name}</p>
-            <p>Email: {user.email}</p>
-            <p>Date Joined: {new Date(user.date_joined).toLocaleDateString('en-GB')}</p>
-            </div>
-            {/* Map through projects by this user later */}
+  return (
+    <div className="profile-page">
+      <div className="profile-container">
+      <h1>My Profile</h1>
+      <div className="profile-card">
+        <img src="/images/avatar-1577909_1280.webp" alt="default avatar icon" />
+        
+        <div>
+        <h2>{user.username}</h2>
+          <p>User ID: {user.id}</p>
+          <p>
+            Name: {user.first_name} {user.last_name}
+          </p>
+          <p>Email: {user.email}</p>
+          <p>
+            Date Joined:{" "}
+            {new Date(user.date_joined).toLocaleDateString("en-GB")}
+          </p>
         </div>
-    );
+      </div>
+      {/* Map through projects by this user later */}
+    </div>
+    </div>
+  );
 }
 
 export default ProfileCard;
