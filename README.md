@@ -5,7 +5,7 @@
 ## Planning:
 ### Grassroots Goals
 
-Deployed site: https://65f00e79b349f5898998c4e5--voluble-smakager-701865.netlify.app/
+Deployed site: https://grassrootsgoals.netlify.app/
 
 Grassroots Goals is a crowdfunding application designed to support local sports clubs in raising funds for various needs within grassroots sports. This platform enables clubs to initiate campaigns for scholarships, registration fees, uniforms, equipment, and coaching/training expenses. Through Grassroots Goals, communities can come together to contribute and help foster the growth and development of sport at the grassroots level.
 
