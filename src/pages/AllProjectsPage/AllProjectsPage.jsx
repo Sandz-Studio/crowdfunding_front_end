@@ -27,7 +27,7 @@ function AllProjectsPage() {
 
   return (
     <div className="all-projects">
-      <h1>Add a sort function later?</h1>
+      <h1>All Campaigns</h1>
         <div className="project-list">
             {projects.map((projectData, key) => {
                 return <ProjectCard key={key} projectData={projectData} />;

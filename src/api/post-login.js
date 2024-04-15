@@ -19,6 +19,12 @@ async function postLogin(username, password) {
           throw new Error(fallbackError);
       });
 
+    //   Another way to do this?
+    //   const message = Object.values(data)
+    //         .join('\n');
+    //     alert('Error trying to login:\n' + message);
+    //     throw new Error(message);
+
       const errorMessage = data?.detail ?? fallbackError;
       throw new Error(errorMessage);
   }

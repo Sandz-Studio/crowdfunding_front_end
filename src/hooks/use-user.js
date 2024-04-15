@@ -7,7 +7,7 @@ export default function useUser(userId) {
     const [error, setError] = useState();
 
     useEffect(() => {
-        // pass projectId to the getUser function
+        // pass userId to the getUser function
         getUser(userId)
         .then((user) => {
             setUser(user);
@@ -18,7 +18,7 @@ export default function useUser(userId) {
             setIsLoading(false);
         });
 
-    // Now we need to pass the userId to the dependency array so that the hook will re-run if the projectId changes.
+    // Now we need to pass the userId to the dependency array so that the hook will re-run if the userId changes.
     }, [userId]);
 
     return { user, isLoading, error };

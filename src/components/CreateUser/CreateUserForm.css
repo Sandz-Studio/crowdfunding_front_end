@@ -53,3 +53,10 @@ form {
   button[type="submit"]:hover {
     background-color: #5b886e;
   }
+
+  /* Media query for screens with a minimum width of 768px */
+@media screen and (min-width: 768px) {
+  form {
+      width: 800px; 
+  }
+}

@@ -18,7 +18,7 @@ function NavBar() {
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/projects">Campaigns</NavLink></li>
+          <li><NavLink to="/projects">All Campaigns</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
         {auth.token ? (
